@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #6c63ff;
+  --primary-color: #d0946f;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -35,6 +35,29 @@ p {
   font-size: 18px;
   line-height: 1.5;
   font-family: "Source Serif 4", serif;
+}
+
+em {
+  color: #939b7d;
+}
+
+.navbar {
+  background-color: #e8d8c7;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.navbar .navbar-brand,
+.nav-item .nav-link {
+  color: black;
+}
+
+.navbar .navbar-brand {
+  font: 24px;
+  font-weight: bold;
+}
+
+.nav-item .nav-link {
+  font: 20px;
 }
 
 .navigation-links {
