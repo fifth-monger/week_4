@@ -21,7 +21,8 @@ h1 {
 
 h2 {
   font-size: 48px;
-  font-family: "Source Serif 4", serif;
+  font-family: "Space Grotesk", serif;
+  font-weight: lighter;
 }
 
 h3 {
@@ -83,12 +84,20 @@ em {
   box-shadow: var(--box-shadow);
   color: white;
   font-family: "JetBrains Mono", monospace;
+  font-size: clamp(14px, 1.75vw, 18px);
+}
+
+.primary-link:hover {
+  color: #e8d8c7;
 }
 
 .secondary-link {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   font-family: "JetBrains Mono", monospace;
+}
+.secondary-link:hover {
+  color: #926b38;
 }
 
 .homepage-link {
@@ -115,9 +124,10 @@ em {
 
 .email-link:hover {
   text-decoration: underline;
+  color: #e8d8c7;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   body {
     padding: 1em;
   }
