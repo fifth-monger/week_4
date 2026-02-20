@@ -113,16 +113,30 @@ em {
   margin: 10px;
 }
 
-.email-link {
+.email-wrap {
   display: flex;
   justify-content: center;
-  color: var(--primary-color);
-  font-size: 28px;
+  margin-top: 80px;
+}
+.email-container {
+  border-radius: 30px;
+  padding: 100px 150px;
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  border: black solid 2px;
+}
+.connect-text {
+  display: inline-block;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
   text-decoration: none;
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
 }
 
-.email-link:hover {
-  text-decoration: underline;
+.email-container:hover .connect-text {
+  transform: scale(1.6);
   color: #e8d8c7;
 }
 
