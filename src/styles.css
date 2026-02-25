@@ -1,40 +1,43 @@
 :root {
-  --primary-color: #014466;
-  --secondary-color: #c4d9d2;
-  --background-color: #fcf4e6;
+  --primary-color: #8987EC;
+  --secondary-color: #C7CC10;
+  --third-color:#598FFC;
+  --background-color: #EFEDFA;
+  --font-color: #5E4D3D;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   --nav-h: 72px;
 }
 
+
 body {
   height: 100%;
+  background: var(--background-color);
 }
-
 h1 {
   font-size: 96px;
   font-family: "Space Grotesk", sans-serif;
+  color: var(--font-color);
 }
-
 h2 {
   font-size: 48px;
   font-family: "Space Grotesk", serif;
   font-weight: lighter;
+  color: var(--font-color);
 }
-
 h3 {
   font-size: 24px;
   opacity: 0.7;
   font-family: "Source Serif 4", serif;
+  color: var(--font-color);
 }
-
 p {
   font-size: 18px;
   line-height: 1.5;
   font-family: "Source Serif 4", serif;
+  color: var(--font-color);
 }
-
 em {
-  color: var(--third-color);
+  color: var(--secondary-color);
   font-weight: bolder;
 }
 
@@ -45,7 +48,6 @@ em {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-
 .panel {
   height: 100%;
   scroll-snap-align: start;
@@ -57,22 +59,19 @@ em {
 .navbar {
   background-color: var(--primary-color);
   font-family: "Space Grotesk", sans-serif;
+  border-bottom: var(--third-color) solid 4px;
 }
-
 .navbar .navbar-brand,
 .nav-item .nav-link {
   color: white;
 }
-
 .navbar .navbar-brand {
   font: 24px;
   font-weight: bold;
 }
-
 .nav-item .nav-link {
   font: 20px;
 }
-
 .navigation-links {
   display: flex;
   margin-top: 40px;
@@ -90,7 +89,6 @@ em {
   text-decoration: none;
   text-transform: capitalize;
 }
-
 .primary-link {
   border-radius: 4px;
   padding: 20px 15px;
@@ -101,44 +99,60 @@ em {
   color: white;
   font-family: "JetBrains Mono", monospace;
 }
-
 .primary-link:hover {
   color: var(--secondary-color);
 }
-
 .secondary-link {
   border: 2px solid var(--primary-color);
   font-family: "JetBrains Mono", monospace;
   color: var(--primary-color);
 }
-
 .secondary-page {
   margin: 82px 0 auto;
 }
-.about-page {
-  padding: 160px 20px;
+.container {
+width: 100%;
 }
-.about-paragraph {
+.content-page {
+  padding: 160px 0px;
+}
+.content-section {
   margin: 30px;
 }
-
 .img-fluid {
   max-width: 100%;
   height: auto;
+  border: var(--third-color) solid 4px;
+  border-radius: 54px;
 }
-
 .btn-branding {
   background: var(--primary-color);
+  box-shadow: var(--box-shadow);
   font-family: "JetBrains Mono", monospace;
   border-radius: 6px;
   color: white;
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
+  margin-bottom: 40px;
 }
-
 .btn-branding:hover {
   color: var(--secondary-color);
+}
+
+.projects h1 {
+  font-size: 64px;
+  line-height: 1;
+}
+.projects h3 {
+  font-family: "JetBrains Mono", monospace;
+  opacity: 100;
+}
+.projects img {
+  transform: scale(0.75);
+  border: var(--third-color) solid 4px;
+  border-radius: 54px;
+  
 }
 
 .email-wrap {
@@ -147,11 +161,11 @@ em {
   margin-top: 80px;
 }
 .email-container {
-  border-radius: 30px;
+  border-radius: 54px;
   padding: 100px 150px;
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
-  border: var(--third-color) solid 2px;
+  border: var(--third-color) solid 4px;
   font-size: 30px;
 }
 .connect-text {
@@ -187,6 +201,21 @@ em {
     text-align: center;
     margin: 0 20px;
   }
+
+  .about-page {
+    text-align: center;
+  }
+  .about-page img {
+    scale: calc(75%);
+  }
+  .btn-branding {
+    margin-bottom: 0px;
+  }
+
+.projects h1 {
+  font-size: 48px;
+}
+
   .email-container {
     font-size: 20px;
     border-radius: 15px;
@@ -195,4 +224,3 @@ em {
   .project-container {
     padding: 1em;
   }
-}
