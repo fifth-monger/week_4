@@ -1,17 +1,15 @@
 :root {
-  --primary-color: #8987EC;
-  --secondary-color: #C7CC10;
-  --third-color:#598FFC;
-  --background-color: #EFEDFA;
-  --font-color: #5E4D3D;
+  --primary-color: #8987ec;
+  --secondary-color: #c7cc10;
+  --third-color: #598ffc;
+  --background-color: #efedfa;
+  --font-color: #5e4d3d;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   --nav-h: 72px;
 }
 
-
 body {
   height: 100%;
-  background: var(--background-color);
 }
 h1 {
   font-size: 96px;
@@ -54,6 +52,9 @@ em {
   scroll-snap-stop: always;
   display: grid;
   place-items: center;
+}
+.panel.hero {
+  background: var(--background-color);
 }
 
 .navbar {
@@ -111,16 +112,16 @@ em {
   margin: 82px 0 auto;
 }
 .container {
-width: 100%;
+  width: 100%;
 }
 .content-page {
-  padding: 160px 0px;
+  padding: 100px 0px;
 }
 .content-section {
   margin: 30px;
 }
 .img-fluid {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border: var(--third-color) solid 4px;
   border-radius: 54px;
@@ -149,37 +150,47 @@ width: 100%;
   opacity: 100;
 }
 .projects img {
-  transform: scale(0.75);
-  border: var(--third-color) solid 4px;
+  max-width: 75%;
+  border: none;
   border-radius: 54px;
-  
 }
 
-.email-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
+.skills {
+  width: 90%;
+  border: none;
 }
-.email-container {
-  border-radius: 54px;
-  padding: 100px 150px;
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  border: var(--third-color) solid 4px;
-  font-size: 30px;
+.connect-wrap {
+  margin-bottom: 18px;
 }
-.connect-text {
-  display: inline-block;
-  color: white;
+.connect-branding {
+  width: 95%;
   font-family: "JetBrains Mono", monospace;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    color 180ms ease;
+  font-weight: bolder;
+  color: var(--font-color);
+  border-radius: 6px;
+  border: 2px solid var(--primary-color);
+  text-align: left;
+  font-size: 18px;
+  padding: 12px 30px;
+  transition: transform 300ms ease;
 }
-
-.email-container:hover .connect-text {
-  transform: scale(1.6);
+.connect-branding.first:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--font-color);
+  color: white;
+  transform: translateX(18px);
+}
+.connect-branding.second:hover {
+  background: var(--secondary-color);
+  border: 2px solid var(--font-color);
+  color: var(--font-color);
+  transform: translateX(18px);
+}
+.connect-branding.third:hover {
+  background: var(--third-color);
+  border: 2px solid var(--font-color);
+  color: white;
+  transform: translateX(18px);
 }
 
 @media (max-width: 767px) {
@@ -211,11 +222,9 @@ width: 100%;
   .btn-branding {
     margin-bottom: 0px;
   }
-
-.projects h1 {
-  font-size: 48px;
-}
-
+  .projects h1 {
+    font-size: 48px;
+  }
   .email-container {
     font-size: 20px;
     border-radius: 15px;
@@ -224,3 +233,4 @@ width: 100%;
   .project-container {
     padding: 1em;
   }
+}
