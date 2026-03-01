@@ -288,4 +288,7 @@ footer .social-links a:hover {
   .project-container {
     padding: 1em;
   }
+  footer .email-link {
+    font: 20px;
+  }
 }
