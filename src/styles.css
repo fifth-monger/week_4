@@ -28,6 +28,11 @@ h3 {
   font-family: "Source Serif 4", serif;
   color: var(--font-color);
 }
+h4 {
+  font-size: 38px;
+  font-family: "Space Grotesk", serif;
+  font-weight: bolder;
+}
 p {
   font-size: 18px;
   line-height: 1.5;
@@ -38,6 +43,11 @@ em {
   color: var(--secondary-color);
   font-weight: bolder;
 }
+footer {
+  width: 100%;
+  padding: 5rem 0 2rem 0;
+  flex-shrink: 0;
+}
 
 .snap {
   height: calc(100dvh - var(--nav-h));
@@ -47,7 +57,7 @@ em {
   scroll-behavior: smooth;
 }
 .panel {
-  height: 100%;
+  min-height: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: grid;
@@ -55,6 +65,12 @@ em {
 }
 .panel.hero {
   background: var(--background-color);
+}
+
+.panel-d {
+  padding: 4rem 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 .navbar {
@@ -108,9 +124,6 @@ em {
   font-family: "JetBrains Mono", monospace;
   color: var(--primary-color);
 }
-.secondary-page {
-  margin: 82px 0 auto;
-}
 .container {
   width: 100%;
 }
@@ -135,7 +148,6 @@ em {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
-  margin-bottom: 40px;
 }
 .btn-branding:hover {
   color: var(--secondary-color);
@@ -191,6 +203,49 @@ em {
   border: 2px solid var(--font-color);
   color: white;
   transform: translateX(18px);
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .contact-box {
+  background: var(--background-color);
+  width: 100%;
+  padding: 40px 80px;
+  border-radius: 10px;
+  color: var(--font-color);
+}
+footer .contact-box p {
+  margin: 0;
+}
+footer .email-link {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Source Serif 4", serif;
+}
+footer .email-link:hover {
+  color: var(--third-color);
+}
+footer .social-links a {
+  margin: 0 10px;
+  color: var(--third-color);
+  background: var(--background-color);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 180ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  background: var(--secondary-color);
 }
 
 @media (max-width: 767px) {
